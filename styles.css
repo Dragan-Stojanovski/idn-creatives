@@ -3,13 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Segoe UI", sans-serif;
   line-height: 1.6;
   background: #fdfdfd;
   color: #111;
-  scroll-behavior: smooth;
 }
 
 /* Navbar */
@@ -106,21 +107,22 @@ body {
   justify-content: center;
   align-items: center;
   padding-top: 80px;
-  background-image: url("https://cdn-iageh.nitrocdn.com/swPnJQNUxahHDXXXcmcfAPoesosxxvjB/assets/images/optimized/rev-86c75a5/www.vireovideo.com/wp-content/uploads/2024/03/Vireo-Video-Background-Design-2.jpg");
+  background-color: #0d1333;
+  /* background-image: url("https://cdn-iageh.nitrocdn.com/swPnJQNUxahHDXXXcmcfAPoesosxxvjB/assets/images/optimized/rev-86c75a5/www.vireovideo.com/wp-content/uploads/2024/03/Vireo-Video-Background-Design-2.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center; */
   text-align: center;
   color: white;
   z-index: 0;
 }
 
-.hero::before {
+/* .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* semi-transparent black overlay */
+  background: rgba(0, 0, 0, 0.5); 
   z-index: 1;
-}
+} */
 
 .hero-content {
   position: relative;
@@ -282,13 +284,13 @@ body {
 }
 
 .slide {
-  min-width: 500px !important;
+  min-width:200px !important;
   flex-shrink: 0;
   text-align: center;
 }
 
 .slide iframe {
-  width: 100%;
+  width:auto;
   height: 500px;
   border-radius: 10px;
 }
@@ -297,6 +299,7 @@ body {
   margin-top: 1rem;
   font-size: 0.95rem;
   color: #ddd;
+  max-width:300px;
 }
 
 .slider-nav {
@@ -321,12 +324,22 @@ body {
   background: rgba(255, 255, 255, 0.3);
 }
 
+
+
+
+
+
+
+
+
+
+
+
 .cta-section {
   padding: 5rem 2rem;
   background: #0d1333;
   color: #fff;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .cta-container {
@@ -386,6 +399,172 @@ body {
   border-top: 1px solid white;
 }
 
+/* Modal Backdrop */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content Box */
+.modal-content {
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+  background: #0d1333;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 0 transparent;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Lock scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+.founders-section {
+  padding: 2rem 2rem;
+  background: #0d1333;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.founders-section .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.founders-section .section-subtitle {
+  color: #aaa;
+  font-size: 1.1rem;
+  margin-bottom: 4rem;
+}
+
+.founders-grid {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: start;
+  justify-content: center;
+}
+.founders-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.founder-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.05);
+
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.founder-card:hover {
+  box-shadow: 0 12px 24px rgba(0, 255, 255, 0.1);
+}
+
+.image-wrapper {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #00ffe1;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.founder-card h3 {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: #00ffe1;
+}
+
+.founder-card .role {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.founder-card .bio {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.linkedin-link {
+  display: inline-block;
+  margin-top: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.linkedin-link img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1); /* Makes icon white on dark bg */
+}
+
+.linkedin-link:hover {
+  transform: scale(1.1);
+}
+
+.slider-nav button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .nav-links {
@@ -398,12 +577,12 @@ body {
     color: white;
   }
 
-   /* ✅ When navbar is scrolled */
+  /* ✅ When navbar is scrolled */
   .navbar.scrolled .hamburger {
     color: black;
   }
 
-    .navbar.scrolled .nav-links,
+  .navbar.scrolled .nav-links,
   .navbar.scrolled .mobile-menu {
     color: black;
     background-color: white;
@@ -472,7 +651,8 @@ body {
   }
 
   .slide iframe {
-    height: 300px;
+    height: 200x;
+        
   }
 
   .cta-section h2 {
@@ -483,4 +663,8 @@ body {
     width: 100%;
     padding: 1rem;
   }
+
+  .founders-section {
+  padding: 2rem 1rem;
+}
 }

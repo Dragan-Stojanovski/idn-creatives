@@ -7,7 +7,11 @@
       name="description"
       content="IDN Creatives offers high-quality video editing, motion graphics, and creative services for brands and individuals. Bring your vision to life today!"
     />
-      <link rel="icon" type="image/x-icon" href="./assets/idn_creatives_logo_white.svg">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/idn_creatives_logo_white.svg"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>IDN Creatives</title>
   </head>
@@ -21,8 +25,9 @@
         <nav class="nav-links">
           <a href="#services">Services</a>
           <a href="#testimonials">Testimonials</a>
+          <a href="#founders">Founders</a>
 
-          <a href="#cta">Contact</a>
+          <a href="#cta">Get in touch</a>
         </nav>
         <div class="hamburger" id="hamburger">&#9776;</div>
       </div>
@@ -30,7 +35,8 @@
         <a href="#services">Services</a>
 
         <a href="#testimonials">Testimonials</a>
-        <a href="#cta">Get Started</a>
+        <a href="#founders">Founders</a>
+        <a href="#cta">Get in touch</a>
       </div>
     </header>
 
@@ -86,7 +92,7 @@
 
           <div class="service-card animate-on-scroll">
             <div class="icon">🚀</div>
-            <h3>Optimized for Paid & Organic</h3>
+            <h3>Optimized for Paid & Organic growth</h3>
             <p>
               Use it on Meta ads, Instagram Reels, TikTok, LinkedIn, or YouTube
               Shorts.
@@ -114,9 +120,10 @@
                 allowfullscreen
               ></iframe>
               <p class="slide-caption">
-                “15 extra qualified leads in one week from a single paid set and
-                organic posts.”<br />
-                <strong>– Sameem Rouhani Fard</strong>
+                “We built a video ad funnel that filled his calendar with
+                high-ticket leads, leading to a 4x ROI in his first test
+                month.”<br />
+                <strong>– Mike Coval</strong>
               </p>
             </div>
 
@@ -145,7 +152,7 @@
               <p class="slide-caption">
                 “Built a funnel that delivered high-ticket leads and a 4x ROI in
                 month one.”<br />
-                <strong>– Mike Coval</strong>
+                <strong>– Michael Sipe</strong>
               </p>
             </div>
 
@@ -160,7 +167,7 @@
               <p class="slide-caption">
                 “Increased organic engagement and filled his calendar with
                 discovery calls.”<br />
-                <strong>– Mike Coval</strong>
+                <strong>– Tom Slocum</strong>
               </p>
             </div>
 
@@ -175,15 +182,76 @@
               <p class="slide-caption">
                 “Scaled cold traffic video ads to consistently generate
                 qualified appointments.”<br />
-                <strong>– Mike Coval</strong>
+                <strong>– Sameem</strong>
               </p>
             </div>
-          </div>
-
+  </div>
+          
           <div class="slider-nav">
             <button class="prev">&#10094;</button>
             <button class="next">&#10095;</button>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="founders-section" id="founders">
+      <div class="founders-container ">
+        <h2 class="section-title animate-on-scroll">Meet the Founders</h2>
+        <p class="section-subtitle animate-on-scroll">
+          The creative minds driving IDN Creatives forward.
+        </p>
+
+        <div class="founders-grid ">
+          <!-- Founder 1 -->
+          <div class="founder-card animate-on-scroll">
+            <div class="image-wrapper">
+              <img
+                src="https://media.licdn.com/dms/image/v2/D4E03AQFC4W424rfLjg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730662440786?e=1757548800&v=beta&t=7Cz9sL415dB7nAFdXighW_mrcxOt94YB-YL8M4kdyfA"
+                alt="Ilija Blazhevski"
+              />
+            </div>
+            <h3>Ilija Blazhevski</h3>
+            <p class="role">Social Media Director</p>
+            <p class="bio">
+              Visionary editor and strategist behind hundreds of high-converting
+              video ads. Obsessed with impact, obsessed with results.
+            </p>
+            <a
+              class="linkedin-link"
+              href="https://www.linkedin.com/in/ilija-blazhevski-3430111ba/"
+              target="_blank"
+              rel="noopener"
+            >
+              <img src="./assets/linkedin-icon.svg" alt="LinkedIn" />
+            </a>
+          </div>
+
+          <!-- Founder 2 -->
+          <div class="founder-card animate-on-scroll">
+            <div class="image-wrapper">
+              <img
+                src="https://media.licdn.com/dms/image/v2/C5603AQEjRj8twTEe7g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1643382654377?e=1757548800&v=beta&t=6Ew2-11fVqI8PymfLi3JHVQfadVgG2X7sqeXaW8zOHY"
+                alt="Nikola Trpchevski"
+              />
+            </div>
+            <h3>Nikola Trpchevski</h3>
+            <p class="role">Head of Creatives</p>
+            <p class="bio">
+              Master of motion, rhythm, and storytelling. Turns raw footage into
+              cinematic persuasion.
+            </p>
+            <a
+              class="linkedin-link"
+              href="https://www.linkedin.com/in/nikola-trpchevski-861886188/"
+              target="_blank"
+              rel="noopener"
+            >
+              <img src="./assets/linkedin-icon.svg" height="30px" alt="LinkedIn" />
+            </a>
+          </div>
+
+          <!-- Add more founders as needed -->
         </div>
       </div>
     </section>
@@ -214,7 +282,15 @@
       </div>
     </section>
     <div class="copyright">© 2025 idncreatives. All Rights Reserved.</div>
-
+    <div id="serviceModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close-btn">&times;</span>
+          <h3 id="modalTitle"></h3>
+        </div>
+        <p id="modalDescription"></p>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
